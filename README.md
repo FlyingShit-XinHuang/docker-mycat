@@ -1,5 +1,5 @@
 # Overview
-This project is used to Dockerize the Mycat server
+This project is used to Dockerize the Mycat server 1.6
 
 # Build
 
