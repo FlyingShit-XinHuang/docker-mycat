@@ -20,3 +20,9 @@ The image can also be built with local package:
 ```
 docker build -f local.Dockerfile -t mycat:1.6 .
 ```
+
+If there exists a Mycat tar package downloaded or built by yourself. Copy it to this project root directory and execute:
+
+```
+docker build -f local.Dockerfile --build-arg mycat_src=<Mycat tar package> -t mycat:1.6 .
+```

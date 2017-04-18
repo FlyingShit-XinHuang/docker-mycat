@@ -1,8 +1,10 @@
 FROM openjdk:8-jre
 
-ADD ./Mycat-server-1.6-RELEASE.tar.gz /usr/local/
+ARG mycat_src=Mycat-server-1.6.5-BETA-20170418153238-linux.tar.gz
+ADD ./$mycat_src /usr/local/
 
-RUN chmod +x /usr/local/mycat/bin/*
+RUN echo "build with $mycat_src" && \
+  chmod +x /usr/local/mycat/bin/*
 
 VOLUME ["/usr/local/mycat/conf"]
 
